@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rkfitness/core/config/app_colors.dart';
@@ -7,14 +8,20 @@ import 'package:rkfitness/core/config/app_routing.dart';
 
 
 
-void main() {
+void main() async{
+   WidgetsFlutterBinding.ensureInitialized(); // Ensure that Flutter initializes before Firebase
+  await Firebase.initializeApp();
   runApp(MyApp());
+//  await Firebase.initializeApp(
+//   options: DefaultFirebaseOptions.currentPlatform,
+// );
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: AppConstants.appName,
       theme: ThemeData(
         primaryColor: AppColors.primaryColor,

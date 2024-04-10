@@ -4,6 +4,7 @@
   import 'package:rkfitness/presentation/pages/home_screen.dart';
   import 'package:rkfitness/presentation/pages/login_screen.dart';
   import 'package:rkfitness/presentation/pages/onboarding_screen.dart';
+import 'package:rkfitness/presentation/pages/phone_auth.dart';
   import 'package:rkfitness/presentation/pages/signup_screen.dart';
   import 'package:rkfitness/presentation/pages/splash_screen.dart';
 
@@ -14,5 +15,6 @@
       GetPage(name: AppRoutes.LOGIN, page: () => LoginScreen()),
       GetPage(name: AppRoutes.SIGNUP, page: () => SignupScreen()),
       GetPage(name: AppRoutes.HOME, page: () => HomeScreen()),
+        GetPage(name: AppRoutes.PHONEAUTH, page: () => PhoneAuthScreen()),
     ];
   }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:rkfitness/core/config/app_routes.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -21,7 +23,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Implement any action for the button
+                Get.offNamed(AppRoutes.PHONEAUTH);
               },
               child: Text('Logout'),
             ),

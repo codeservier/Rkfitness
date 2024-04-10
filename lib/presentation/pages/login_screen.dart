@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
             CustomButton(
               text: 'Login',
               onPressed: () {
-                Get.offNamed(AppRoutes.HOME);
+                Get.offNamed(AppRoutes.PHONEAUTH);
               },
             ),
             SizedBox(height: 20),
