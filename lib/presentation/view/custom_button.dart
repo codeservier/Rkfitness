@@ -20,10 +20,11 @@ class CustomButton extends StatelessWidget {
         style: TextStyle(color: Colors.white), // Text color
       ),
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primaryColor, // Button color from the theme
-        padding: EdgeInsets.symmetric(vertical: 16), // Adjust padding as needed
+        backgroundColor: AppColors.primaryColor,
+        padding: EdgeInsets.symmetric(vertical: 24), 
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10), // Button border radius
+          borderRadius: BorderRadius.circular(16),
+          
         ),
       ),
     );

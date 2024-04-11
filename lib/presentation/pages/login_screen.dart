@@ -25,24 +25,26 @@ class LoginScreen extends StatelessWidget {
             CustomTextField(
               labelText: 'Email',
               prefixIcon: Icons.email,
+              placeholder: ' Email Address',
             ),
             SizedBox(height: 20),
             CustomTextField(
               labelText: 'Password',
               prefixIcon: Icons.lock,
               obscureText: true,
+              placeholder: 'Enter Password',
             ),
             SizedBox(height: 20),
             CustomButton(
               text: 'Login',
               onPressed: () {
-                Get.offNamed(AppRoutes.PHONEAUTH);
+                Get.offNamed(AppRoutes.HOME);
               },
             ),
             SizedBox(height: 20),
             TextButton(
               onPressed: () {
-                Get.offNamed(AppRoutes.SIGNUP);
+                Get.offNamed(AppRoutes.OPTION);
               },
               child: Text('Don\'t have an account? Sign up'),
             ),

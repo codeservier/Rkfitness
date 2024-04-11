@@ -7,25 +7,26 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // ignore: prefer_const_constructors
             Text(
               'Welcome to Home Screen',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Get.offNamed(AppRoutes.PHONEAUTH);
+                Get.offNamed(AppRoutes.LOGIN);
               },
-              child: Text('Logout'),
+              child: const Text('Logout'),
             ),
           ],
         ),

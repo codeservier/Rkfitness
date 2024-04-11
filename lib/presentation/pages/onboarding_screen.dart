@@ -39,23 +39,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             const SizedBox(height: 20),
             _buildPageIndicator(),
             const SizedBox(height: 20),
-               CustomButton(
-                    text:
-                        _currentPage == OnboardingData.onboardingData.length - 1
-                            ? 'Start'
-                            : 'Next',
-                    onPressed: () {
-                      if (_currentPage <
-                          OnboardingData.onboardingData.length - 1) {
-                        _pageController.nextPage(
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.ease,
-                        );
-                      } else {
-                        Get.offNamed(AppRoutes.LOGIN);
-                      }
-                    },
-                  ),
+            Container(
+              width:
+                  MediaQuery.of(context).size.width * 0.5, // Set width to 50%
+              child: CustomButton(
+                text: _currentPage == OnboardingData.onboardingData.length - 1
+                    ? 'Start'
+                    : 'Next',
+                onPressed: () {
+                  if (_currentPage < OnboardingData.onboardingData.length - 1) {
+                    _pageController.nextPage(
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.ease,
+                    );
+                  } else {
+                    Get.offNamed(AppRoutes.OPTION);
+                  }
+                },
+              ),
+            ),
+            const SizedBox(
+              height: 100,
+            )
           ],
         ),
       ),
